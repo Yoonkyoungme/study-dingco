@@ -79,7 +79,7 @@ function isGoodCustomer(customer) {
 
 **1. 데이터 만들기**
 
-```tsx
+```ts
 const answer = [];
 const window = 5;
 
@@ -99,7 +99,7 @@ for(let i = 0; i < array.length; i++) {
 
 - 특정 범위의 값을 새로운 배열로 만들어 반복하면 어떻게 될까요?
 
-```tsx
+```ts
 const answer = [];
 const window = 5;
 
@@ -118,7 +118,7 @@ for(let i = 0; i < array.length; i++) {
 
 1. **한 번에 전체 배열을 조작하기**
 
-```tsx
+```ts
 const answer = [];
 const window = 5;
 
@@ -131,7 +131,7 @@ for(let i = 0; i < array.length; i++) {
 
 1. **작은 단계로 나누기**
 
-```tsx
+```ts
 const answer = [];
 const window = 5;
 
@@ -156,12 +156,12 @@ function range(start, endO {
 - 로깅 배열 데이터로 현재 장바구니 상태 만들기 → `reduce()`
 - 데이터가 삭제되는 경우도 모두 처리해준다면 `[’add’, ‘shirt’]` 와 같은 방식으로 받아서 어떤 동작인지도 데이터로 표현할 수 있다.
 
-```tsx
+```ts
 const cartLogging = ['shirt', 'shoes', 'shirt' ...];
 
 const shoppingCart = reduce(cartLogging,  {}, function(cart, item) {
 	if(!cart[item]){ // 해당 물건을 처음 담는 경우
-		return add_item(cart, {name: item, quantity: 1, price: priceLoopup(item)};
+		return add_item(cart, {name: item, quantity: 1, price: priceLookup(item)});
 	} else { // 해당 물건이 장바구니에 이미 있는 경우
 		const quantity = cart[item].quantity;
 		return setFieldByName(cart, item, 'quantity', quantity + 1);
